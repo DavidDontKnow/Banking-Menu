@@ -10,6 +10,7 @@ int main() {
 	char menuOption;
 	string name;
 	string accountNumber;
+	string lastFour;
 	
 
 	cout << "Welcome to the Banking Menu" << endl;
@@ -17,6 +18,7 @@ int main() {
 	getline(cin, name);
 	cout << "Please enter your account number: ";
 	getline(cin, accountNumber);
+	lastFour = accountNumber.substr(accountNumber.length() - 4);
 	cout << "Thank you!" << endl;
 	cout << "Please wait while we load your account information..." << endl;
 	cout << "----------------------------------------------------------------" << endl;
@@ -78,6 +80,7 @@ int main() {
 			cout << "Account Information" << endl;
 			cout << "Name: " << name << endl;
 			cout << "Account Number: " << accountNumber << endl;
+			cout << "Last Four of account number: " << lastFour << endl;
 			cout << "Balance: " << balance << endl;
 			cout << "----------------------------------------------------------------" << endl;
 				break;
